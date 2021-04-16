@@ -1,0 +1,278 @@
+#AWS::CertificateManager::Certificate CertificateTransparencyLoggingPreference  == DISABLED |OR| AWS::CertificateManager::Certificate CertificateTransparencyLoggingPreference  == ENABLED << Enforce allowed values [DISABLED | ENABLED]
+#AWS::Cognito::UserPoolIdentityProvider ProviderType  == Facebook |OR| AWS::Cognito::UserPoolIdentityProvider ProviderType  == Google |OR| AWS::Cognito::UserPoolIdentityProvider ProviderType  == LoginWithAmazon |OR| AWS::Cognito::UserPoolIdentityProvider ProviderType  == OIDC |OR| AWS::Cognito::UserPoolIdentityProvider ProviderType  == SAML |OR| AWS::Cognito::UserPoolIdentityProvider ProviderType  == SignInWithApple << Enforce allowed values [Facebook | Google | LoginWithAmazon | OIDC | SAML | SignInWithApple]
+#AWS::DataBrew::Job LogSubscription  == DISABLE |OR| AWS::DataBrew::Job LogSubscription  == ENABLE << Enforce allowed values [DISABLE | ENABLE]
+#AWS::EC2::FlowLog LogDestinationType  == cloud-watch-logs |OR| AWS::EC2::FlowLog LogDestinationType  == s3 << Enforce allowed values [cloud-watch-logs | s3]
+#AWS::EC2::FlowLog ResourceType  == NetworkInterface |OR| AWS::EC2::FlowLog ResourceType  == Subnet |OR| AWS::EC2::FlowLog ResourceType  == VPC << Enforce allowed values [NetworkInterface | Subnet | VPC]
+#AWS::EC2::FlowLog TrafficType  == ACCEPT |OR| AWS::EC2::FlowLog TrafficType  == ALL |OR| AWS::EC2::FlowLog TrafficType  == REJECT << Enforce allowed values [ACCEPT | ALL | REJECT]
+#AWS::ServiceCatalog::PortfolioPrincipalAssociation PrincipalType  == IAM << Enforce allowed values [IAM]
+#AWS::Transfer::User HomeDirectoryType  == LOGICAL |OR| AWS::Transfer::User HomeDirectoryType  == PATH << Enforce allowed values [LOGICAL | PATH]
+* AccessLogSetting.DestinationArn  == /\S/ <<  AccessLogSetting is an expected but optional String property for all resources
+* AccessLogSetting.Format  == /\S/ <<  AccessLogSetting is an expected but optional String property for all resources
+* AccessLogSettings.DestinationArn  == /\S/ <<  AccessLogSettings is an expected but optional String property for all resources
+* AccessLogSettings.Format  == /\S/ <<  AccessLogSettings is an expected but optional String property for all resources
+* AccessLoggingPolicy.S3BucketName  == /\S/ <<  AccessLoggingPolicy is an expected but optional String property for all resources
+* AccessLoggingPolicy.S3BucketPrefix  == /\S/ <<  AccessLoggingPolicy is an expected but optional String property for all resources
+* CloudWatchLoggingOption.LogStreamARN  == /\S/ <<  CloudWatchLoggingOption is an expected but optional String property for all resources
+* ConnectionLogOptions.CloudwatchLogGroup  == /\S/ <<  ConnectionLogOptions is an expected but optional String property for all resources
+* ConnectionLogOptions.CloudwatchLogStream  == /\S/ <<  ConnectionLogOptions is an expected but optional String property for all resources
+* LogConfig.CloudWatchLogsRoleArn  == /\S/ <<  LogConfig is an expected but optional String property for all resources
+* LogConfig.FieldLogLevel  == /\S/ <<  LogConfig is an expected but optional String property for all resources
+* LogPatternSets.PatternSetName  == /\S/ <<  LogPatternSets is an expected but optional String property for all resources
+* LogPublishingOptions.CloudWatchLogsLogGroupArn  == /\S/ <<  LogPublishingOptions is an expected but optional String property for all resources
+* Loggers.Component  == /\S/ <<  Loggers is an expected but optional String property for all resources
+* Loggers.Id  == /\S/ <<  Loggers is an expected but optional String property for all resources
+* Loggers.Level  == /\S/ <<  Loggers is an expected but optional String property for all resources
+* Loggers.Type  == /\S/ <<  Loggers is an expected but optional String property for all resources
+* LoggingConfiguration.DestinationBucketName  == /\S/ <<  LoggingConfiguration is an expected but optional String property for all resources
+* LoggingConfiguration.Level  == /\S/ <<  LoggingConfiguration is an expected but optional String property for all resources
+* LoggingConfiguration.LogFilePrefix  == /\S/ <<  LoggingConfiguration is an expected but optional String property for all resources
+* LoggingInfo.Region  == /\S/ <<  LoggingInfo is an expected but optional String property for all resources
+* LoggingInfo.S3Bucket  == /\S/ <<  LoggingInfo is an expected but optional String property for all resources
+* LoggingInfo.S3Prefix  == /\S/ <<  LoggingInfo is an expected but optional String property for all resources
+* LoggingProperties.BucketName  == /\S/ <<  LoggingProperties is an expected but optional String property for all resources
+* LoggingProperties.S3KeyPrefix  == /\S/ <<  LoggingProperties is an expected but optional String property for all resources
+* MethodSettings.LoggingLevel  == /\S/ <<  MethodSettings is an expected but optional String property for all resources
+* Options.LogLevel  == /\S/ <<  Options is an expected but optional String property for all resources
+* Predicate.Logical  == /\S/ <<  Predicate is an expected but optional String property for all resources
+* RouteSettings.LoggingLevel  == /\S/ <<  RouteSettings is an expected but optional String property for all resources
+* StageDescription.LoggingLevel  == /\S/ <<  StageDescription is an expected but optional String property for all resources
+AWS::ApiGateway::Deployment StageDescription.LoggingLevel  == /\S/ <<  AWS::ApiGateway::Deployment is an expected but optional String property for StageDescription
+AWS::ApiGateway::Stage AccessLogSetting.DestinationArn  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for AccessLogSetting
+AWS::ApiGateway::Stage AccessLogSetting.Format  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for AccessLogSetting
+AWS::ApiGateway::Stage MethodSettings.LoggingLevel  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for MethodSettings
+AWS::ApiGatewayV2::Stage AccessLogSettings.DestinationArn  == /\S/ <<  AWS::ApiGatewayV2::Stage is an expected but optional String property for AccessLogSettings
+AWS::ApiGatewayV2::Stage AccessLogSettings.Format  == /\S/ <<  AWS::ApiGatewayV2::Stage is an expected but optional String property for AccessLogSettings
+AWS::ApiGatewayV2::Stage RouteSettings.LoggingLevel  == /\S/ <<  AWS::ApiGatewayV2::Stage is an expected but optional String property for RouteSettings
+AWS::AppSync::GraphQLApi LogConfig.CloudWatchLogsRoleArn  == /\S/ <<  AWS::AppSync::GraphQLApi is an expected but optional String property for LogConfig
+AWS::AppSync::GraphQLApi LogConfig.FieldLogLevel  == /\S/ <<  AWS::AppSync::GraphQLApi is an expected but optional String property for LogConfig
+AWS::ApplicationInsights::Application LogPatternSets.PatternSetName  == /\S/ <<  AWS::ApplicationInsights::Application is an expected but optional String property for LogPatternSets
+AWS::Athena::DataCatalog Name  == /.*/ <<  Name is a required property for AWS::Athena::DataCatalog
+AWS::Athena::DataCatalog Type  == /.*/ <<  Type is a required property for AWS::Athena::DataCatalog
+AWS::CertificateManager::Certificate CertificateTransparencyLoggingPreference  == /DISABLED/ <<  DISABLED is an expected value for AWS::CertificateManager::Certificate CertificateTransparencyLoggingPreference
+AWS::CertificateManager::Certificate CertificateTransparencyLoggingPreference  == /ENABLED/ <<  ENABLED is an expected value for AWS::CertificateManager::Certificate CertificateTransparencyLoggingPreference
+AWS::CertificateManager::Certificate CertificateTransparencyLoggingPreference IN [DISABLED,ENABLED] << Enforcing Allowed Values only
+AWS::CloudFront::RealtimeLogConfig EndPoints  == /.*/ <<  EndPoints is a required property for AWS::CloudFront::RealtimeLogConfig
+AWS::CloudFront::RealtimeLogConfig EndPoints.StreamType  == /\S/ <<  AWS::CloudFront::RealtimeLogConfig is an expected but optional String property for EndPoints
+AWS::CloudFront::RealtimeLogConfig Fields  == /.*/ <<  Fields is a required property for AWS::CloudFront::RealtimeLogConfig
+AWS::CloudFront::RealtimeLogConfig Name  == /.*/ <<  Name is a required property for AWS::CloudFront::RealtimeLogConfig
+AWS::CloudFront::RealtimeLogConfig SamplingRate  == /.*/ <<  SamplingRate is a required property for AWS::CloudFront::RealtimeLogConfig
+AWS::CloudTrail::Trail EnableLogFileValidation  == /True/ <<  True is an expected value for AWS::CloudTrail::Trail EnableLogFileValidation
+AWS::CloudTrail::Trail EnableLogFileValidation  == True <<  True is expected safe default value
+AWS::CloudTrail::Trail IsLogging  == /.*/ <<  IsLogging is a required property for AWS::CloudTrail::Trail
+AWS::CloudTrail::Trail IsLogging  == /True/ <<  True is an expected value for AWS::CloudTrail::Trail IsLogging
+AWS::CloudTrail::Trail IsLogging  == True <<  True is expected safe default value
+AWS::Cognito::UserPoolIdentityProvider ProviderType  == /LoginWithAmazon/ <<  LoginWithAmazon is an expected value for AWS::Cognito::UserPoolIdentityProvider ProviderType
+AWS::Cognito::UserPoolIdentityProvider ProviderType IN [Facebook,Google,LoginWithAmazon,OIDC,SAML,SignInWithApple] << Enforcing Allowed Values only
+AWS::DataBrew::Job LogSubscription  == /DISABLE/ <<  DISABLE is an expected value for AWS::DataBrew::Job LogSubscription
+AWS::DataBrew::Job LogSubscription  == /ENABLE/ <<  ENABLE is an expected value for AWS::DataBrew::Job LogSubscription
+AWS::DataBrew::Job LogSubscription IN [DISABLE,ENABLE] << Enforcing Allowed Values only
+AWS::DataSync::Task CloudWatchLogGroupArn  == /^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):logs:[a-z\-0-9]*:[0-9]{12}:log-group:([^:\*]*)(:\*)?$/ <<  CloudWatchLogGroupArn is a required pattern for AWS::DataSync::Task
+AWS::DataSync::Task CloudWatchLogGroupArn  == /arn.*{0,562}/ <<  CloudWatchLogGroupArn is a required property for AWS::DataSync::Task
+AWS::DataSync::Task Options.LogLevel  == /\S/ <<  AWS::DataSync::Task is an expected but optional String property for Options
+AWS::EC2::ClientVpnEndpoint ConnectionLogOptions  == /.*/ <<  ConnectionLogOptions is a required property for AWS::EC2::ClientVpnEndpoint
+AWS::EC2::ClientVpnEndpoint ConnectionLogOptions.CloudwatchLogGroup  == /\S/ <<  AWS::EC2::ClientVpnEndpoint is an expected but optional String property for ConnectionLogOptions
+AWS::EC2::ClientVpnEndpoint ConnectionLogOptions.CloudwatchLogStream  == /\S/ <<  AWS::EC2::ClientVpnEndpoint is an expected but optional String property for ConnectionLogOptions
+AWS::EC2::ClientVpnEndpoint ConnectionLogOptions.ec2.clientvpnendpoint.connectionlogoptions.Enabled  == /.*/ <<  ec2.clientvpnendpoint.connectionlogoptions.Enabled is a required property for AWS::EC2::ClientVpnEndpoint ConnectionLogOptions
+AWS::EC2::FlowLog LogDestinationType  == /cloud-watch-logs/ <<  cloud-watch-logs is an expected value for AWS::EC2::FlowLog LogDestinationType
+AWS::EC2::FlowLog LogDestinationType  == /s3/ <<  s3 is an expected value for AWS::EC2::FlowLog LogDestinationType
+AWS::EC2::FlowLog LogDestinationType IN [cloud-watch-logs,s3] << Enforcing Allowed Values only
+AWS::EC2::FlowLog MaxAggregationInterval  == /[0-9].+/ <<  Integer is expected for AWS::EC2::FlowLog of MaxAggregationInterval 
+AWS::EC2::FlowLog ResourceId  == /.*/ <<  ResourceId is a required property for AWS::EC2::FlowLog
+AWS::EC2::FlowLog ResourceType  == /.*/ <<  ResourceType is a required property for AWS::EC2::FlowLog
+AWS::EC2::FlowLog ResourceType  == /NetworkInterface/ <<  NetworkInterface is an expected value for AWS::EC2::FlowLog ResourceType
+AWS::EC2::FlowLog ResourceType  == /Subnet/ <<  Subnet is an expected value for AWS::EC2::FlowLog ResourceType
+AWS::EC2::FlowLog ResourceType  == /VPC/ <<  VPC is an expected value for AWS::EC2::FlowLog ResourceType
+AWS::EC2::FlowLog ResourceType IN [NetworkInterface,Subnet,VPC] << Enforcing Allowed Values only
+AWS::EC2::FlowLog TrafficType  == /.*/ <<  TrafficType is a required property for AWS::EC2::FlowLog
+AWS::EC2::FlowLog TrafficType  == /ACCEPT/ <<  ACCEPT is an expected value for AWS::EC2::FlowLog TrafficType
+AWS::EC2::FlowLog TrafficType  == /ALL/ <<  ALL is an expected value for AWS::EC2::FlowLog TrafficType
+AWS::EC2::FlowLog TrafficType  == /REJECT/ <<  REJECT is an expected value for AWS::EC2::FlowLog TrafficType
+AWS::EC2::FlowLog TrafficType IN [ACCEPT,ALL,REJECT] << Enforcing Allowed Values only
+AWS::ElasticLoadBalancing::LoadBalancer AccessLoggingPolicy.S3BucketName  == /\S/ <<  AWS::ElasticLoadBalancing::LoadBalancer is an expected but optional String property for AccessLoggingPolicy
+AWS::ElasticLoadBalancing::LoadBalancer AccessLoggingPolicy.S3BucketPrefix  == /\S/ <<  AWS::ElasticLoadBalancing::LoadBalancer is an expected but optional String property for AccessLoggingPolicy
+AWS::Elasticsearch::Domain LogPublishingOptions.CloudWatchLogsLogGroupArn  == /\S/ <<  AWS::Elasticsearch::Domain is an expected but optional String property for LogPublishingOptions
+AWS::Glue::Connection CatalogId  == /.*/ <<  CatalogId is a required property for AWS::Glue::Connection
+AWS::Glue::DataCatalogEncryptionSettings CatalogId  == /.*/ <<  CatalogId is a required property for AWS::Glue::DataCatalogEncryptionSettings
+AWS::Glue::DataCatalogEncryptionSettings DataCatalogEncryptionSettings  == /.*/ <<  DataCatalogEncryptionSettings is a required property for AWS::Glue::DataCatalogEncryptionSettings
+AWS::Glue::Database CatalogId  == /.*/ <<  CatalogId is a required property for AWS::Glue::Database
+AWS::Glue::Partition CatalogId  == /.*/ <<  CatalogId is a required property for AWS::Glue::Partition
+AWS::Glue::Table CatalogId  == /.*/ <<  CatalogId is a required property for AWS::Glue::Table
+AWS::Glue::Trigger Predicate.Logical  == /\S/ <<  AWS::Glue::Trigger is an expected but optional String property for Predicate
+AWS::Greengrass::LoggerDefinition Name  == /.*/ <<  Name is a required property for AWS::Greengrass::LoggerDefinition
+AWS::Greengrass::LoggerDefinitionVersion LoggerDefinitionId  == /.*/ <<  LoggerDefinitionId is a required property for AWS::Greengrass::LoggerDefinitionVersion
+AWS::Greengrass::LoggerDefinitionVersion Loggers  == /.*/ <<  Loggers is a required property for AWS::Greengrass::LoggerDefinitionVersion
+AWS::Greengrass::LoggerDefinitionVersion Loggers.Component  == /\S/ <<  AWS::Greengrass::LoggerDefinitionVersion is an expected but optional String property for Loggers
+AWS::Greengrass::LoggerDefinitionVersion Loggers.Id  == /\S/ <<  AWS::Greengrass::LoggerDefinitionVersion is an expected but optional String property for Loggers
+AWS::Greengrass::LoggerDefinitionVersion Loggers.Level  == /\S/ <<  AWS::Greengrass::LoggerDefinitionVersion is an expected but optional String property for Loggers
+AWS::Greengrass::LoggerDefinitionVersion Loggers.Type  == /\S/ <<  AWS::Greengrass::LoggerDefinitionVersion is an expected but optional String property for Loggers
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption ApplicationName  == /.*/ <<  ApplicationName is a required property for AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption ApplicationName  == /[a-zA-Z0-9_.-]+/ <<  ApplicationName is a required pattern for AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption ApplicationName  == /\S{1,128}/ <<  ApplicationName is a required property for AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption CloudWatchLoggingOption  == /.*/ <<  CloudWatchLoggingOption is a required property for AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption CloudWatchLoggingOption.LogStreamARN  == /\S/ <<  AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption is an expected but optional String property for CloudWatchLoggingOption
+AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption CloudWatchLoggingOption.kinesisanalyticsv2.applicationcloudwatchloggingoption.cloudwatchloggingoption.LogStreamARN  == /.*/ <<  kinesisanalyticsv2.applicationcloudwatchloggingoption.cloudwatchloggingoption.LogStreamARN is a required property for AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption CloudWatchLoggingOption
+AWS::Logs::Destination DestinationName  == /.*/ <<  DestinationName is a required property for AWS::Logs::Destination
+AWS::Logs::Destination DestinationName  == /[^:*]*/ <<  DestinationName is a required pattern for AWS::Logs::Destination
+AWS::Logs::Destination DestinationName  == /\S{1,512}/ <<  DestinationName is a required property for AWS::Logs::Destination
+AWS::Logs::Destination DestinationPolicy  == /.*/ <<  DestinationPolicy is a required property for AWS::Logs::Destination
+AWS::Logs::Destination RoleArn  == /.*/ <<  RoleArn is a required property for AWS::Logs::Destination
+AWS::Logs::Destination TargetArn  == /.*/ <<  TargetArn is a required property for AWS::Logs::Destination
+AWS::Logs::LogGroup KmsKeyId  == /\S{0,256}/ <<  AWS::Logs::LogGroup is an expected length of String property for KmsKeyId
+AWS::Logs::LogGroup LogGroupName  == /[\.\-_/#A-Za-z0-9]+/ <<  LogGroupName is a required pattern for AWS::Logs::LogGroup
+AWS::Logs::LogGroup LogGroupName  == /\S{1,512}/ <<  LogGroupName is a required property for AWS::Logs::LogGroup
+AWS::Logs::LogGroup RetentionInDays  == /[0-9].+/ <<  Integer is expected for AWS::Logs::LogGroup of RetentionInDays 
+AWS::Logs::LogStream LogGroupName  == /.*/ <<  LogGroupName is a required property for AWS::Logs::LogStream
+AWS::Logs::LogStream LogGroupName  == /[\.\-_/#A-Za-z0-9]+/ <<  LogGroupName is a required pattern for AWS::Logs::LogStream
+AWS::Logs::LogStream LogGroupName  == /\S{1,512}/ <<  LogGroupName is a required property for AWS::Logs::LogStream
+AWS::Logs::LogStream LogStreamName  == /[^:*]*/ <<  LogStreamName is a required pattern for AWS::Logs::LogStream
+AWS::Logs::LogStream LogStreamName  == /\S{1,512}/ <<  LogStreamName is a required property for AWS::Logs::LogStream
+AWS::Logs::MetricFilter FilterPattern  == /.*/ <<  FilterPattern is a required property for AWS::Logs::MetricFilter
+AWS::Logs::MetricFilter LogGroupName  == /.*/ <<  LogGroupName is a required property for AWS::Logs::MetricFilter
+AWS::Logs::MetricFilter LogGroupName  == /[\.\-_/#A-Za-z0-9]+/ <<  LogGroupName is a required pattern for AWS::Logs::MetricFilter
+AWS::Logs::MetricFilter LogGroupName  == /\S{1,512}/ <<  LogGroupName is a required property for AWS::Logs::MetricFilter
+AWS::Logs::MetricFilter MetricTransformations  == /.*/ <<  MetricTransformations is a required property for AWS::Logs::MetricFilter
+AWS::Logs::MetricFilter MetricTransformations.MetricName  == /\S/ <<  AWS::Logs::MetricFilter is an expected but optional String property for MetricTransformations
+AWS::Logs::MetricFilter MetricTransformations.MetricNamespace  == /\S/ <<  AWS::Logs::MetricFilter is an expected but optional String property for MetricTransformations
+AWS::Logs::MetricFilter MetricTransformations.MetricValue  == /\S/ <<  AWS::Logs::MetricFilter is an expected but optional String property for MetricTransformations
+AWS::Logs::SubscriptionFilter DestinationArn  == /.*/ <<  DestinationArn is a required property for AWS::Logs::SubscriptionFilter
+AWS::Logs::SubscriptionFilter FilterPattern  == /.*/ <<  FilterPattern is a required property for AWS::Logs::SubscriptionFilter
+AWS::Logs::SubscriptionFilter LogGroupName  == /.*/ <<  LogGroupName is a required property for AWS::Logs::SubscriptionFilter
+AWS::Logs::SubscriptionFilter LogGroupName  == /[\.\-_/#A-Za-z0-9]+/ <<  LogGroupName is a required pattern for AWS::Logs::SubscriptionFilter
+AWS::Logs::SubscriptionFilter LogGroupName  == /\S{1,512}/ <<  LogGroupName is a required property for AWS::Logs::SubscriptionFilter
+AWS::MSK::Cluster LoggingInfo.msk.cluster.logginginfo.BrokerLogs  == /.*/ <<  msk.cluster.logginginfo.BrokerLogs is a required property for AWS::MSK::Cluster LoggingInfo
+AWS::MediaStore::Container AccessLoggingEnabled  == /True/ <<  True is an expected value for AWS::MediaStore::Container AccessLoggingEnabled
+AWS::MediaStore::Container AccessLoggingEnabled  == True <<  True is expected safe default value
+AWS::NetworkFirewall::LoggingConfiguration FirewallArn  == /.*/ <<  FirewallArn is a required property for AWS::NetworkFirewall::LoggingConfiguration
+AWS::NetworkFirewall::LoggingConfiguration LoggingConfiguration  == /.*/ <<  LoggingConfiguration is a required property for AWS::NetworkFirewall::LoggingConfiguration
+AWS::NetworkFirewall::LoggingConfiguration LoggingConfiguration.networkfirewall.loggingconfiguration.loggingconfiguration.LogDestinationConfigs  == /.*/ <<  networkfirewall.loggingconfiguration.loggingconfiguration.LogDestinationConfigs is a required property for AWS::NetworkFirewall::LoggingConfiguration LoggingConfiguration
+AWS::RDS::DBProxy DebugLogging  == /True/ <<  True is an expected value for AWS::RDS::DBProxy DebugLogging
+AWS::RDS::DBProxy DebugLogging  == True <<  True is expected safe default value
+AWS::Redshift::Cluster LoggingProperties.BucketName  == /\S/ <<  AWS::Redshift::Cluster is an expected but optional String property for LoggingProperties
+AWS::Redshift::Cluster LoggingProperties.S3KeyPrefix  == /\S/ <<  AWS::Redshift::Cluster is an expected but optional String property for LoggingProperties
+AWS::Redshift::Cluster LoggingProperties.redshift.cluster.loggingproperties.BucketName  == /.*/ <<  redshift.cluster.loggingproperties.BucketName is a required property for AWS::Redshift::Cluster LoggingProperties
+AWS::Route53Resolver::ResolverQueryLoggingConfig DestinationArn  == /arn.*{1,600}/ <<  DestinationArn is a required property for AWS::Route53Resolver::ResolverQueryLoggingConfig
+AWS::Route53Resolver::ResolverQueryLoggingConfig Name  == /(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)/ <<  Name is a required pattern for AWS::Route53Resolver::ResolverQueryLoggingConfig
+AWS::Route53Resolver::ResolverQueryLoggingConfig Name  == /\S{1,64}/ <<  Name is a required property for AWS::Route53Resolver::ResolverQueryLoggingConfig
+AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation ResolverQueryLogConfigId  == /\S{1,64}/ <<  AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation is an expected length of String property for ResolverQueryLogConfigId
+AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation ResourceId  == /\S{1,64}/ <<  AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation is an expected length of String property for ResourceId
+AWS::S3::Bucket LoggingConfiguration.DestinationBucketName  == /\S/ <<  AWS::S3::Bucket is an expected but optional String property for LoggingConfiguration
+AWS::S3::Bucket LoggingConfiguration.LogFilePrefix  == /\S/ <<  AWS::S3::Bucket is an expected but optional String property for LoggingConfiguration
+AWS::SSM::MaintenanceWindowTask LoggingInfo.Region  == /\S/ <<  AWS::SSM::MaintenanceWindowTask is an expected but optional String property for LoggingInfo
+AWS::SSM::MaintenanceWindowTask LoggingInfo.S3Bucket  == /\S/ <<  AWS::SSM::MaintenanceWindowTask is an expected but optional String property for LoggingInfo
+AWS::SSM::MaintenanceWindowTask LoggingInfo.S3Prefix  == /\S/ <<  AWS::SSM::MaintenanceWindowTask is an expected but optional String property for LoggingInfo
+AWS::SSM::MaintenanceWindowTask LoggingInfo.ssm.maintenancewindowtask.logginginfo.Region  == /.*/ <<  ssm.maintenancewindowtask.logginginfo.Region is a required property for AWS::SSM::MaintenanceWindowTask LoggingInfo
+AWS::SSM::MaintenanceWindowTask LoggingInfo.ssm.maintenancewindowtask.logginginfo.S3Bucket  == /.*/ <<  ssm.maintenancewindowtask.logginginfo.S3Bucket is a required property for AWS::SSM::MaintenanceWindowTask LoggingInfo
+AWS::SageMaker::Project ServiceCatalogProvisioningDetails  == /.*/ <<  ServiceCatalogProvisioningDetails is a required property for AWS::SageMaker::Project
+AWS::ServiceCatalog::AcceptedPortfolioShare AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::AcceptedPortfolioShare is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::AcceptedPortfolioShare PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::AcceptedPortfolioShare
+AWS::ServiceCatalog::AcceptedPortfolioShare PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::AcceptedPortfolioShare
+AWS::ServiceCatalog::CloudFormationProduct AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::CloudFormationProduct is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::CloudFormationProduct Description  == /arn.*{0,8191}/ <<  Description is a required property for AWS::ServiceCatalog::CloudFormationProduct
+AWS::ServiceCatalog::CloudFormationProduct Distributor  == /\S{0,8191}/ <<  AWS::ServiceCatalog::CloudFormationProduct is an expected length of String property for Distributor
+AWS::ServiceCatalog::CloudFormationProduct Name  == /.*/ <<  Name is a required property for AWS::ServiceCatalog::CloudFormationProduct
+AWS::ServiceCatalog::CloudFormationProduct Name  == /arn.*{0,8191}/ <<  Name is a required property for AWS::ServiceCatalog::CloudFormationProduct
+AWS::ServiceCatalog::CloudFormationProduct Owner  == /.*/ <<  Owner is a required property for AWS::ServiceCatalog::CloudFormationProduct
+AWS::ServiceCatalog::CloudFormationProduct Owner  == /\S{0,8191}/ <<  AWS::ServiceCatalog::CloudFormationProduct is an expected length of String property for Owner
+AWS::ServiceCatalog::CloudFormationProduct ProvisioningArtifactParameters  == /.*/ <<  ProvisioningArtifactParameters is a required property for AWS::ServiceCatalog::CloudFormationProduct
+AWS::ServiceCatalog::CloudFormationProduct ReplaceProvisioningArtifacts  == /True/ <<  True is an expected value for AWS::ServiceCatalog::CloudFormationProduct ReplaceProvisioningArtifacts
+AWS::ServiceCatalog::CloudFormationProduct ReplaceProvisioningArtifacts  == True <<  True is expected safe default value
+AWS::ServiceCatalog::CloudFormationProduct SupportDescription  == /arn.*{0,8191}/ <<  SupportDescription is a required property for AWS::ServiceCatalog::CloudFormationProduct
+AWS::ServiceCatalog::CloudFormationProduct SupportEmail  == /\S{0,254}/ <<  AWS::ServiceCatalog::CloudFormationProduct is an expected length of String property for SupportEmail
+AWS::ServiceCatalog::CloudFormationProduct SupportUrl  == /\S{0,2083}/ <<  AWS::ServiceCatalog::CloudFormationProduct is an expected length of String property for SupportUrl
+AWS::ServiceCatalog::CloudFormationProvisionedProduct AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::CloudFormationProvisionedProduct is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::CloudFormationProvisionedProduct PathId  == /^[a-zA-Z0-9_\-]*/ <<  PathId is a required pattern for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct PathName  == /\S{1,100}/ <<  PathName is a required property for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProductId  == /^[a-zA-Z0-9_\-]*/ <<  ProductId is a required pattern for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProductName  == /[a-zA-Z0-9][a-zA-Z0-9._-]*/ <<  ProductName is a required pattern for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProductName  == /\S{1,128}/ <<  ProductName is a required property for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisionedProductName  == /[a-zA-Z0-9][a-zA-Z0-9._-]*/ <<  ProvisionedProductName is a required pattern for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisionedProductName  == /\S{1,128}/ <<  ProvisionedProductName is a required property for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningArtifactId  == /^[a-zA-Z0-9_\-]*/ <<  ProvisioningArtifactId is a required pattern for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningArtifactName  == /arn.*{0,8192}/ <<  ProvisioningArtifactName is a required property for AWS::ServiceCatalog::CloudFormationProvisionedProduct
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningParameters.Key  == /\S/ <<  AWS::ServiceCatalog::CloudFormationProvisionedProduct is an expected but optional String property for ProvisioningParameters
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningParameters.Value  == /\S/ <<  AWS::ServiceCatalog::CloudFormationProvisionedProduct is an expected but optional String property for ProvisioningParameters
+AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningPreferences.StackSetOperationType  == /\S/ <<  AWS::ServiceCatalog::CloudFormationProvisionedProduct is an expected but optional String property for ProvisioningPreferences
+AWS::ServiceCatalog::LaunchNotificationConstraint AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::LaunchNotificationConstraint is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::LaunchNotificationConstraint Description  == /arn.*{0,2000}/ <<  Description is a required property for AWS::ServiceCatalog::LaunchNotificationConstraint
+AWS::ServiceCatalog::LaunchNotificationConstraint NotificationArns  == /.*/ <<  NotificationArns is a required property for AWS::ServiceCatalog::LaunchNotificationConstraint
+AWS::ServiceCatalog::LaunchNotificationConstraint PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::LaunchNotificationConstraint
+AWS::ServiceCatalog::LaunchNotificationConstraint PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::LaunchNotificationConstraint
+AWS::ServiceCatalog::LaunchNotificationConstraint ProductId  == /.*/ <<  ProductId is a required property for AWS::ServiceCatalog::LaunchNotificationConstraint
+AWS::ServiceCatalog::LaunchNotificationConstraint ProductId  == /^[a-zA-Z0-9_\-]*/ <<  ProductId is a required pattern for AWS::ServiceCatalog::LaunchNotificationConstraint
+AWS::ServiceCatalog::LaunchRoleConstraint AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::LaunchRoleConstraint is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::LaunchRoleConstraint Description  == /arn.*{0,2000}/ <<  Description is a required property for AWS::ServiceCatalog::LaunchRoleConstraint
+AWS::ServiceCatalog::LaunchRoleConstraint PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::LaunchRoleConstraint
+AWS::ServiceCatalog::LaunchRoleConstraint PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::LaunchRoleConstraint
+AWS::ServiceCatalog::LaunchRoleConstraint ProductId  == /.*/ <<  ProductId is a required property for AWS::ServiceCatalog::LaunchRoleConstraint
+AWS::ServiceCatalog::LaunchRoleConstraint ProductId  == /^[a-zA-Z0-9_\-]*/ <<  ProductId is a required pattern for AWS::ServiceCatalog::LaunchRoleConstraint
+AWS::ServiceCatalog::LaunchTemplateConstraint AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::LaunchTemplateConstraint is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::LaunchTemplateConstraint Description  == /arn.*{0,2000}/ <<  Description is a required property for AWS::ServiceCatalog::LaunchTemplateConstraint
+AWS::ServiceCatalog::LaunchTemplateConstraint PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::LaunchTemplateConstraint
+AWS::ServiceCatalog::LaunchTemplateConstraint PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::LaunchTemplateConstraint
+AWS::ServiceCatalog::LaunchTemplateConstraint ProductId  == /.*/ <<  ProductId is a required property for AWS::ServiceCatalog::LaunchTemplateConstraint
+AWS::ServiceCatalog::LaunchTemplateConstraint ProductId  == /^[a-zA-Z0-9_\-]*/ <<  ProductId is a required pattern for AWS::ServiceCatalog::LaunchTemplateConstraint
+AWS::ServiceCatalog::LaunchTemplateConstraint Rules  == /.*/ <<  Rules is a required property for AWS::ServiceCatalog::LaunchTemplateConstraint
+AWS::ServiceCatalog::Portfolio AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::Portfolio is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::Portfolio Description  == /arn.*{0,2000}/ <<  Description is a required property for AWS::ServiceCatalog::Portfolio
+AWS::ServiceCatalog::Portfolio DisplayName  == /.*/ <<  DisplayName is a required property for AWS::ServiceCatalog::Portfolio
+AWS::ServiceCatalog::Portfolio DisplayName  == /\S{1,100}/ <<  DisplayName is a required property for AWS::ServiceCatalog::Portfolio
+AWS::ServiceCatalog::Portfolio ProviderName  == /.*/ <<  ProviderName is a required property for AWS::ServiceCatalog::Portfolio
+AWS::ServiceCatalog::Portfolio ProviderName  == /\S{1,50}/ <<  ProviderName is a required property for AWS::ServiceCatalog::Portfolio
+AWS::ServiceCatalog::PortfolioPrincipalAssociation AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::PortfolioPrincipalAssociation is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::PortfolioPrincipalAssociation PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::PortfolioPrincipalAssociation
+AWS::ServiceCatalog::PortfolioPrincipalAssociation PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::PortfolioPrincipalAssociation
+AWS::ServiceCatalog::PortfolioPrincipalAssociation PrincipalARN  == /.*/ <<  PrincipalARN is a required property for AWS::ServiceCatalog::PortfolioPrincipalAssociation
+AWS::ServiceCatalog::PortfolioPrincipalAssociation PrincipalARN  == /arn.*{1,1000}/ <<  PrincipalARN is a required property for AWS::ServiceCatalog::PortfolioPrincipalAssociation
+AWS::ServiceCatalog::PortfolioPrincipalAssociation PrincipalType  == /.*/ <<  PrincipalType is a required property for AWS::ServiceCatalog::PortfolioPrincipalAssociation
+AWS::ServiceCatalog::PortfolioPrincipalAssociation PrincipalType  == /IAM/ <<  IAM is an expected value for AWS::ServiceCatalog::PortfolioPrincipalAssociation PrincipalType
+AWS::ServiceCatalog::PortfolioPrincipalAssociation PrincipalType IN [IAM] << Enforcing Allowed Values only
+AWS::ServiceCatalog::PortfolioProductAssociation AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::PortfolioProductAssociation is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::PortfolioProductAssociation PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::PortfolioProductAssociation
+AWS::ServiceCatalog::PortfolioProductAssociation PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::PortfolioProductAssociation
+AWS::ServiceCatalog::PortfolioProductAssociation ProductId  == /.*/ <<  ProductId is a required property for AWS::ServiceCatalog::PortfolioProductAssociation
+AWS::ServiceCatalog::PortfolioProductAssociation ProductId  == /^[a-zA-Z0-9_\-]*/ <<  ProductId is a required pattern for AWS::ServiceCatalog::PortfolioProductAssociation
+AWS::ServiceCatalog::PortfolioProductAssociation SourcePortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  SourcePortfolioId is a required pattern for AWS::ServiceCatalog::PortfolioProductAssociation
+AWS::ServiceCatalog::PortfolioShare AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::PortfolioShare is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::PortfolioShare AccountId  == /.*/ <<  AccountId is a required property for AWS::ServiceCatalog::PortfolioShare
+AWS::ServiceCatalog::PortfolioShare AccountId  == /^[0-9]{12}$/ <<  AccountId is a required pattern for AWS::ServiceCatalog::PortfolioShare
+AWS::ServiceCatalog::PortfolioShare PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::PortfolioShare
+AWS::ServiceCatalog::PortfolioShare PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::PortfolioShare
+AWS::ServiceCatalog::ResourceUpdateConstraint AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::ResourceUpdateConstraint is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::ResourceUpdateConstraint Description  == /arn.*{0,2000}/ <<  Description is a required property for AWS::ServiceCatalog::ResourceUpdateConstraint
+AWS::ServiceCatalog::ResourceUpdateConstraint PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::ResourceUpdateConstraint
+AWS::ServiceCatalog::ResourceUpdateConstraint PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::ResourceUpdateConstraint
+AWS::ServiceCatalog::ResourceUpdateConstraint ProductId  == /.*/ <<  ProductId is a required property for AWS::ServiceCatalog::ResourceUpdateConstraint
+AWS::ServiceCatalog::ResourceUpdateConstraint ProductId  == /^[a-zA-Z0-9_\-]*/ <<  ProductId is a required pattern for AWS::ServiceCatalog::ResourceUpdateConstraint
+AWS::ServiceCatalog::ResourceUpdateConstraint TagUpdateOnProvisionedProduct  == /.*/ <<  TagUpdateOnProvisionedProduct is a required property for AWS::ServiceCatalog::ResourceUpdateConstraint
+AWS::ServiceCatalog::StackSetConstraint AcceptLanguage  == /\S{0,100}/ <<  AWS::ServiceCatalog::StackSetConstraint is an expected length of String property for AcceptLanguage
+AWS::ServiceCatalog::StackSetConstraint AccountList  == /.*/ <<  AccountList is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint AdminRole  == /.*/ <<  AdminRole is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint Description  == /.*/ <<  Description is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint Description  == /arn.*{0,2000}/ <<  Description is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint ExecutionRole  == /.*/ <<  ExecutionRole is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint PortfolioId  == /.*/ <<  PortfolioId is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint PortfolioId  == /^[a-zA-Z0-9_\-]*/ <<  PortfolioId is a required pattern for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint ProductId  == /.*/ <<  ProductId is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint ProductId  == /^[a-zA-Z0-9_\-]*/ <<  ProductId is a required pattern for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint RegionList  == /.*/ <<  RegionList is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::StackSetConstraint StackInstanceControl  == /.*/ <<  StackInstanceControl is a required property for AWS::ServiceCatalog::StackSetConstraint
+AWS::ServiceCatalog::TagOption Active  == /True/ <<  True is an expected value for AWS::ServiceCatalog::TagOption Active
+AWS::ServiceCatalog::TagOption Active  == True <<  True is expected safe default value
+AWS::ServiceCatalog::TagOption Key  == /.*/ <<  Key is a required property for AWS::ServiceCatalog::TagOption
+AWS::ServiceCatalog::TagOption Value  == /.*/ <<  Value is a required property for AWS::ServiceCatalog::TagOption
+AWS::ServiceCatalog::TagOptionAssociation ResourceId  == /.*/ <<  ResourceId is a required property for AWS::ServiceCatalog::TagOptionAssociation
+AWS::ServiceCatalog::TagOptionAssociation TagOptionId  == /.*/ <<  TagOptionId is a required property for AWS::ServiceCatalog::TagOptionAssociation
+AWS::StepFunctions::StateMachine LoggingConfiguration.Level  == /\S/ <<  AWS::StepFunctions::StateMachine is an expected but optional String property for LoggingConfiguration
+AWS::Transfer::Server LoggingRole  == /arn:.*role/.*/ <<  LoggingRole is a required pattern for AWS::Transfer::Server
+AWS::Transfer::User HomeDirectoryType  == /LOGICAL/ <<  LOGICAL is an expected value for AWS::Transfer::User HomeDirectoryType
+AWS::Transfer::User HomeDirectoryType IN [LOGICAL,PATH] << Enforcing Allowed Values only
+ConnectionLogOptions.Enabled == True << Enforce Expected Value for ec2.clientvpnendpoint.connectionlogoptions.Enabled
+LogConfig.ExcludeVerboseContent == True << Enforce Expected Value for appsync.graphqlapi.logconfig.ExcludeVerboseContent
+LoggingConfiguration.IncludeExecutionData == True << Enforce Expected Value for stepfunctions.statemachine.loggingconfiguration.IncludeExecutionData
+Options.LogLevel == BASIC << Enforce Expected Value for datasync.task.options.LogLevel
+Options.LogLevel == OFF << Enforce Expected Value for datasync.task.options.LogLevel
+Options.LogLevel == TRANSFER << Enforce Expected Value for datasync.task.options.LogLevel
+Options.LogLevel IN [BASIC,OFF,TRANSFER] << Enforce Allowed Values
+ProvisioningPreferences.StackSetOperationType == CREATE << Enforce Expected Value for servicecatalog.cloudformationprovisionedproduct.provisioningpreferences.StackSetOperationType
+ProvisioningPreferences.StackSetOperationType == DELETE << Enforce Expected Value for servicecatalog.cloudformationprovisionedproduct.provisioningpreferences.StackSetOperationType
+ProvisioningPreferences.StackSetOperationType == UPDATE << Enforce Expected Value for servicecatalog.cloudformationprovisionedproduct.provisioningpreferences.StackSetOperationType

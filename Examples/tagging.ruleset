@@ -1,0 +1,112 @@
+#AWS::ECR::Repository ImageTagMutability  == IMMUTABLE |OR| AWS::ECR::Repository ImageTagMutability  == MUTABLE << Enforce allowed values [IMMUTABLE | MUTABLE]
+#AWS::ECS::Service PropagateTags  == SERVICE |OR| AWS::ECS::Service PropagateTags  == TASK_DEFINITION << Enforce allowed values [SERVICE | TASK_DEFINITION]
+* AccessPointTags.Key  == /\S/ <<  AccessPointTags is an expected but optional String property for all resources
+* AccessPointTags.Value  == /\S/ <<  AccessPointTags is an expected but optional String property for all resources
+* ApiStages.ApiId  == /\S/ <<  ApiStages is an expected but optional String property for all resources
+* ApiStages.Stage  == /\S/ <<  ApiStages is an expected but optional String property for all resources
+* AutoBranchCreationConfig.Stage  == /\S/ <<  AutoBranchCreationConfig is an expected but optional String property for all resources
+* BodyS3Location.Etag  == /\S/ <<  BodyS3Location is an expected but optional String property for all resources
+* HealthCheckTags.Key  == /\S/ <<  HealthCheckTags is an expected but optional String property for all resources
+* HealthCheckTags.Value  == /\S/ <<  HealthCheckTags is an expected but optional String property for all resources
+* OrganizationCustomRuleMetadata.TagKeyScope  == /\S/ <<  OrganizationCustomRuleMetadata is an expected but optional String property for all resources
+* OrganizationCustomRuleMetadata.TagValueScope  == /\S/ <<  OrganizationCustomRuleMetadata is an expected but optional String property for all resources
+* OrganizationManagedRuleMetadata.TagKeyScope  == /\S/ <<  OrganizationManagedRuleMetadata is an expected but optional String property for all resources
+* OrganizationManagedRuleMetadata.TagValueScope  == /\S/ <<  OrganizationManagedRuleMetadata is an expected but optional String property for all resources
+* ResourceTags.Key  == /\S/ <<  ResourceTags is an expected but optional String property for all resources
+* ResourceTags.Value  == /\S/ <<  ResourceTags is an expected but optional String property for all resources
+* Scope.TagKey  == /\S/ <<  Scope is an expected but optional String property for all resources
+* Scope.TagValue  == /\S/ <<  Scope is an expected but optional String property for all resources
+* StageDescription.CacheClusterSize  == /\S/ <<  StageDescription is an expected but optional String property for all resources
+* StageDescription.ClientCertificateId  == /\S/ <<  StageDescription is an expected but optional String property for all resources
+* StageDescription.Description  == /\S/ <<  StageDescription is an expected but optional String property for all resources
+* StageDescription.DocumentationVersion  == /\S/ <<  StageDescription is an expected but optional String property for all resources
+* StageDescription.LoggingLevel  == /\S/ <<  StageDescription is an expected but optional String property for all resources
+* StageKeys.RestApiId  == /\S/ <<  StageKeys is an expected but optional String property for all resources
+* StageKeys.StageName  == /\S/ <<  StageKeys is an expected but optional String property for all resources
+* TagSpecifications.ResourceType  == /\S/ <<  TagSpecifications is an expected but optional String property for all resources
+* XMLClassifier.RowTag  == /\S/ <<  XMLClassifier is an expected but optional String property for all resources
+AWS::Amplify::App AutoBranchCreationConfig.Stage  == /\S/ <<  AWS::Amplify::App is an expected but optional String property for AutoBranchCreationConfig
+AWS::ApiGateway::ApiKey StageKeys.RestApiId  == /\S/ <<  AWS::ApiGateway::ApiKey is an expected but optional String property for StageKeys
+AWS::ApiGateway::ApiKey StageKeys.StageName  == /\S/ <<  AWS::ApiGateway::ApiKey is an expected but optional String property for StageKeys
+AWS::ApiGateway::Deployment StageDescription.CacheClusterSize  == /\S/ <<  AWS::ApiGateway::Deployment is an expected but optional String property for StageDescription
+AWS::ApiGateway::Deployment StageDescription.ClientCertificateId  == /\S/ <<  AWS::ApiGateway::Deployment is an expected but optional String property for StageDescription
+AWS::ApiGateway::Deployment StageDescription.Description  == /\S/ <<  AWS::ApiGateway::Deployment is an expected but optional String property for StageDescription
+AWS::ApiGateway::Deployment StageDescription.DocumentationVersion  == /\S/ <<  AWS::ApiGateway::Deployment is an expected but optional String property for StageDescription
+AWS::ApiGateway::Deployment StageDescription.LoggingLevel  == /\S/ <<  AWS::ApiGateway::Deployment is an expected but optional String property for StageDescription
+AWS::ApiGateway::Stage AccessLogSetting.DestinationArn  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for AccessLogSetting
+AWS::ApiGateway::Stage AccessLogSetting.Format  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for AccessLogSetting
+AWS::ApiGateway::Stage CacheClusterEnabled  == /True/ <<  True is an expected value for AWS::ApiGateway::Stage CacheClusterEnabled
+AWS::ApiGateway::Stage CacheClusterEnabled  == True <<  True is expected safe default value
+AWS::ApiGateway::Stage CanarySetting.DeploymentId  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for CanarySetting
+AWS::ApiGateway::Stage MethodSettings.HttpMethod  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for MethodSettings
+AWS::ApiGateway::Stage MethodSettings.LoggingLevel  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for MethodSettings
+AWS::ApiGateway::Stage MethodSettings.ResourcePath  == /\S/ <<  AWS::ApiGateway::Stage is an expected but optional String property for MethodSettings
+AWS::ApiGateway::Stage RestApiId  == /.*/ <<  RestApiId is a required property for AWS::ApiGateway::Stage
+AWS::ApiGateway::Stage TracingEnabled  == /True/ <<  True is an expected value for AWS::ApiGateway::Stage TracingEnabled
+AWS::ApiGateway::UsagePlan ApiStages.ApiId  == /\S/ <<  AWS::ApiGateway::UsagePlan is an expected but optional String property for ApiStages
+AWS::ApiGateway::UsagePlan ApiStages.Stage  == /\S/ <<  AWS::ApiGateway::UsagePlan is an expected but optional String property for ApiStages
+AWS::ApiGatewayV2::Api BodyS3Location.Etag  == /\S/ <<  AWS::ApiGatewayV2::Api is an expected but optional String property for BodyS3Location
+AWS::ApiGatewayV2::ApiMapping Stage  == /.*/ <<  Stage is a required property for AWS::ApiGatewayV2::ApiMapping
+AWS::ApiGatewayV2::Stage AccessLogSettings.DestinationArn  == /\S/ <<  AWS::ApiGatewayV2::Stage is an expected but optional String property for AccessLogSettings
+AWS::ApiGatewayV2::Stage AccessLogSettings.Format  == /\S/ <<  AWS::ApiGatewayV2::Stage is an expected but optional String property for AccessLogSettings
+AWS::ApiGatewayV2::Stage ApiId  == /.*/ <<  ApiId is a required property for AWS::ApiGatewayV2::Stage
+AWS::ApiGatewayV2::Stage AutoDeploy  == /True/ <<  True is an expected value for AWS::ApiGatewayV2::Stage AutoDeploy
+AWS::ApiGatewayV2::Stage AutoDeploy  == True <<  True is expected safe default value
+AWS::ApiGatewayV2::Stage RouteSettings.LoggingLevel  == /\S/ <<  AWS::ApiGatewayV2::Stage is an expected but optional String property for RouteSettings
+AWS::ApiGatewayV2::Stage StageName  == /.*/ <<  StageName is a required property for AWS::ApiGatewayV2::Stage
+AWS::Batch::JobDefinition PropagateTags  == /True/ <<  True is an expected value for AWS::Batch::JobDefinition PropagateTags
+AWS::Batch::JobDefinition PropagateTags  == True <<  True is expected safe default value
+AWS::CloudFront::StreamingDistribution Tags  == /.*/ <<  Tags is a required property for AWS::CloudFront::StreamingDistribution
+AWS::CodePipeline::Pipeline Stages  == /.*/ <<  Stages is a required property for AWS::CodePipeline::Pipeline
+AWS::Config::ConfigRule Scope.TagKey  == /\S/ <<  AWS::Config::ConfigRule is an expected but optional String property for Scope
+AWS::Config::ConfigRule Scope.TagValue  == /\S/ <<  AWS::Config::ConfigRule is an expected but optional String property for Scope
+AWS::Config::OrganizationConfigRule OrganizationCustomRuleMetadata.TagKeyScope  == /\S/ <<  AWS::Config::OrganizationConfigRule is an expected but optional String property for OrganizationCustomRuleMetadata
+AWS::Config::OrganizationConfigRule OrganizationCustomRuleMetadata.TagValueScope  == /\S/ <<  AWS::Config::OrganizationConfigRule is an expected but optional String property for OrganizationCustomRuleMetadata
+AWS::Config::OrganizationConfigRule OrganizationManagedRuleMetadata.TagKeyScope  == /\S/ <<  AWS::Config::OrganizationConfigRule is an expected but optional String property for OrganizationManagedRuleMetadata
+AWS::Config::OrganizationConfigRule OrganizationManagedRuleMetadata.TagValueScope  == /\S/ <<  AWS::Config::OrganizationConfigRule is an expected but optional String property for OrganizationManagedRuleMetadata
+AWS::EC2::CapacityReservation TagSpecifications.ResourceType  == /\S/ <<  AWS::EC2::CapacityReservation is an expected but optional String property for TagSpecifications
+AWS::EC2::ClientVpnEndpoint TagSpecifications.ResourceType  == /\S/ <<  AWS::EC2::ClientVpnEndpoint is an expected but optional String property for TagSpecifications
+AWS::EC2::EC2Fleet TagSpecifications.ResourceType  == /\S/ <<  AWS::EC2::EC2Fleet is an expected but optional String property for TagSpecifications
+AWS::ECR::Repository ImageTagMutability  == /IMMUTABLE/ <<  IMMUTABLE is an expected value for AWS::ECR::Repository ImageTagMutability
+AWS::ECR::Repository ImageTagMutability  == /MUTABLE/ <<  MUTABLE is an expected value for AWS::ECR::Repository ImageTagMutability
+AWS::ECR::Repository ImageTagMutability IN [IMMUTABLE,MUTABLE] << Enforcing Allowed Values only
+AWS::ECS::Service EnableECSManagedTags  == /True/ <<  True is an expected value for AWS::ECS::Service EnableECSManagedTags
+AWS::ECS::Service PropagateTags  == /SERVICE/ <<  SERVICE is an expected value for AWS::ECS::Service PropagateTags
+AWS::ECS::Service PropagateTags  == /TASK_DEFINITION/ <<  TASK_DEFINITION is an expected value for AWS::ECS::Service PropagateTags
+AWS::ECS::Service PropagateTags IN [SERVICE,TASK_DEFINITION] << Enforcing Allowed Values only
+AWS::EFS::AccessPoint AccessPointTags.Key  == /\S/ <<  AWS::EFS::AccessPoint is an expected but optional String property for AccessPointTags
+AWS::EFS::AccessPoint AccessPointTags.Value  == /\S/ <<  AWS::EFS::AccessPoint is an expected but optional String property for AccessPointTags
+AWS::FMS::Policy ExcludeResourceTags  == /.*/ <<  ExcludeResourceTags is a required property for AWS::FMS::Policy
+AWS::FMS::Policy ExcludeResourceTags  == /True/ <<  True is an expected value for AWS::FMS::Policy ExcludeResourceTags
+AWS::FMS::Policy ExcludeResourceTags  == True <<  True is expected safe default value
+AWS::FMS::Policy ResourceTags.Key  == /\S/ <<  AWS::FMS::Policy is an expected but optional String property for ResourceTags
+AWS::FMS::Policy ResourceTags.Value  == /\S/ <<  AWS::FMS::Policy is an expected but optional String property for ResourceTags
+AWS::Glue::Classifier XMLClassifier.RowTag  == /\S/ <<  AWS::Glue::Classifier is an expected but optional String property for XMLClassifier
+AWS::Glue::Classifier XMLClassifier.glue.classifier.xmlclassifier.RowTag  == /.*/ <<  glue.classifier.xmlclassifier.RowTag is a required property for AWS::Glue::Classifier XMLClassifier
+AWS::Inspector::ResourceGroup ResourceGroupTags  == /.*/ <<  ResourceGroupTags is a required property for AWS::Inspector::ResourceGroup
+AWS::Lambda::EventInvokeConfig MaximumEventAgeInSeconds  <= 21600 <<  Integer is expected for AWS::Lambda::EventInvokeConfig of MaximumEventAgeInSeconds 
+AWS::Lambda::EventInvokeConfig MaximumEventAgeInSeconds  == /[0-9].+/ <<  Integer is expected for AWS::Lambda::EventInvokeConfig of MaximumEventAgeInSeconds 
+AWS::Lambda::EventInvokeConfig MaximumEventAgeInSeconds  >= 60 <<  Integer is expected for AWS::Lambda::EventInvokeConfig of MaximumEventAgeInSeconds 
+AWS::RDS::DBInstance CopyTagsToSnapshot  == /True/ <<  True is an expected value for AWS::RDS::DBInstance CopyTagsToSnapshot
+AWS::Route53::HealthCheck HealthCheckTags.Key  == /\S/ <<  AWS::Route53::HealthCheck is an expected but optional String property for HealthCheckTags
+AWS::Route53::HealthCheck HealthCheckTags.Value  == /\S/ <<  AWS::Route53::HealthCheck is an expected but optional String property for HealthCheckTags
+AWS::SageMaker::EndpointConfig DataCaptureConfig.sagemaker.endpointconfig.datacaptureconfig.InitialSamplingPercentage  == /.*/ <<  sagemaker.endpointconfig.datacaptureconfig.InitialSamplingPercentage is a required property for AWS::SageMaker::EndpointConfig DataCaptureConfig
+AWS::ServiceCatalog::ResourceUpdateConstraint TagUpdateOnProvisionedProduct  == /.*/ <<  TagUpdateOnProvisionedProduct is a required property for AWS::ServiceCatalog::ResourceUpdateConstraint
+AWS::ServiceCatalog::TagOption Active  == /True/ <<  True is an expected value for AWS::ServiceCatalog::TagOption Active
+AWS::ServiceCatalog::TagOption Active  == True <<  True is expected safe default value
+AWS::ServiceCatalog::TagOption Key  == /.*/ <<  Key is a required property for AWS::ServiceCatalog::TagOption
+AWS::ServiceCatalog::TagOption Value  == /.*/ <<  Value is a required property for AWS::ServiceCatalog::TagOption
+AWS::ServiceCatalog::TagOptionAssociation ResourceId  == /.*/ <<  ResourceId is a required property for AWS::ServiceCatalog::TagOptionAssociation
+AWS::ServiceCatalog::TagOptionAssociation TagOptionId  == /.*/ <<  TagOptionId is a required property for AWS::ServiceCatalog::TagOptionAssociation
+CanarySetting.UseStageCache == True << Enforce Expected Value for apigateway.stage.canarysetting.UseStageCache
+DeploymentCanarySettings.UseStageCache == True << Enforce Expected Value for apigateway.deployment.deploymentcanarysettings.UseStageCache
+LustreConfiguration.CopyTagsToBackups == True << Enforce Expected Value for fsx.filesystem.lustreconfiguration.CopyTagsToBackups
+RouteSettings.DataTraceEnabled == True << Enforce Expected Value for apigatewayv2.stage.routesettings.DataTraceEnabled
+RouteSettings.DetailedMetricsEnabled == True << Enforce Expected Value for apigatewayv2.stage.routesettings.DetailedMetricsEnabled
+StageDescription.CacheClusterEnabled == True << Enforce Expected Value for apigateway.deployment.stagedescription.CacheClusterEnabled
+StageDescription.CacheDataEncrypted == True << Enforce Expected Value for apigateway.deployment.stagedescription.CacheDataEncrypted
+StageDescription.CachingEnabled == True << Enforce Expected Value for apigateway.deployment.stagedescription.CachingEnabled
+StageDescription.DataTraceEnabled == True << Enforce Expected Value for apigateway.deployment.stagedescription.DataTraceEnabled
+StageDescription.MetricsEnabled == True << Enforce Expected Value for apigateway.deployment.stagedescription.MetricsEnabled
+StageDescription.TracingEnabled == True << Enforce Expected Value for apigateway.deployment.stagedescription.TracingEnabled
+WindowsConfiguration.CopyTagsToBackups == True << Enforce Expected Value for fsx.filesystem.windowsconfiguration.CopyTagsToBackups
